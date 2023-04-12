@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
+    entry: './index.js',
     resolve: {
         extensions: ['.js', '.jsx']
     },
@@ -13,32 +13,46 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
     },
-    rules: [
-        {
-            test: /\.(js|jsx)$/,
-            exclude: /node_modules/,
-            use: {
-                loader: 'babel-loader'
-            }
-        },
-        {
-            test: /\.css$/i,
-            use: [MiniCssExtractPlugin, 'css-loader']
-        },
-        {
-            test: /\.png/,
-            type: 'asset/resource'
-          }
-    ],
+    mode: 'development',
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader'
+                }
+            },
+            {
+                test: /\.css$/i,
+                use: [MiniCssExtractPlugin.loader, 'css-loader']
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource'
+              }
+        ]
+    },
     plugins: [
         new HTMLWebpackPlugin({
             inject: true, 
             template: './public/index.html',
-            filename: './index.'
+            filename: 'index.html'
         }),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin({
+            filename:'[name].[contenthash].css'
+        })
     ],
     optimization: {
         minimize: true
-    }
+    },
+    devServer: {
+        port: 9000,
+        open: {
+            app: {
+              name: 'Chrome',
+            },
+          },
+        compress: true,
+    },
 }

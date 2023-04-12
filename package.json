@@ -4,7 +4,8 @@
   "description": "Johnatan's portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack serve --open",
+    "build": "webpack"
   },
   "author": "@Yotis56",
   "license": "MIT",
