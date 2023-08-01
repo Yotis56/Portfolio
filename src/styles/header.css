@@ -1,0 +1,28 @@
+ul {
+    list-style: none;
+}
+ul li {
+    cursor: pointer;
+}
+header, .header__links, .header__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #666;
+    font-size: 15px;
+    font-family: 'DM Sans';
+}
+header {
+    padding: 0 13%;
+    margin-top: 40px;
+    justify-content: space-between;
+}
+.header__container {
+    justify-content: space-around;
+}
+.header__social {
+    margin-left: 40px;
+}
+.header__social img {
+    padding: 0 10px;
+}

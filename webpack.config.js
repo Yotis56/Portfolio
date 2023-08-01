@@ -5,13 +5,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
     mode: 'development',
     entry: './index.js',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].[contenthash].js',
+        publicPath: '/',
+        clean: true,
+    },
     resolve: {
         extensions: ['.js', '.jsx']
-    },
-    output: {
-        filename: '[name].[contenthash].js',
-        path: path.resolve(__dirname, 'dist'),
-        clean: true,
     },
     mode: 'development',
     module: {
@@ -25,7 +26,7 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, 'css-loader']
+                use: [MiniCssExtractPlugin.loader, "css-loader"]
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
@@ -39,9 +40,7 @@ module.exports = {
             template: './public/index.html',
             filename: 'index.html'
         }),
-        new MiniCssExtractPlugin({
-            filename:'[name].[contenthash].css'
-        })
+        new MiniCssExtractPlugin()
     ],
     optimization: {
         minimize: true

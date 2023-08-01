@@ -1,8 +1,13 @@
 import React from "react";
+import { Header } from "./components/Header";
+import { Hero } from './components/Hero'
 
 const App = () => {
     return (
-        <p>page under construction</p>
+        <>
+            <Header />
+            <Hero /> 
+        </>
     )
 }
 

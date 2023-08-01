@@ -1,0 +1,31 @@
+.hero {
+    margin: 140px 13% 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.hero__text {
+    width: 520px;
+    color: var(--solid-heading, #42446E);
+    font-family: Poppins;
+    font-size: 43px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 52px; /* 120.69% */
+    letter-spacing: -1px;
+}
+.hero__text-highlighted {
+    background: var(--gradient-heading, linear-gradient(90deg, #13B0F5 2.60%, #E70FAA 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.photo {
+    width: 270px;
+    height: 270px;
+    border-radius: 230px;
+    border: 5px solid transparent;
+    background: linear-gradient(white, white) padding-box, 
+                linear-gradient(0deg, rgba(207,4,150,1) 18%, rgba(143,108,207,1) 50%, rgba(42,167,207,1) 88%);
+    filter: grayscale(0.35);
+}
