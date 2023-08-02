@@ -17,7 +17,7 @@ const Header = () => {
                         <li>Home</li>
                     </ul>
                     <ul>
-                        <li>Sobre mí</li>
+                        <li><a href="#about">Sobre Mí</a></li>
                     </ul>
                     <ul>
                         <li>Tecnologías</li>
