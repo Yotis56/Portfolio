@@ -1,0 +1,19 @@
+:root {
+    --solid-heading: #42446E;
+    --dark-content: #666;
+    --light-content: #A7A7A7;
+}
+.title {
+    color: var(--solid-heading);
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -1px;
+    &-centered {
+        text-align: center;
+    }
+}
+
+.secondary-title {
+
+}

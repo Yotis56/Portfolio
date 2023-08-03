@@ -3,7 +3,7 @@ import { Header } from "./components/Header";
 import { Hero } from './components/Hero'
 import { About } from "./components/About";
 
-import './styles/app.css'
+import './styles/app.scss'
 
 const App = () => {
     return (

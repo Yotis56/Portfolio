@@ -3,7 +3,7 @@ import React from "react";
 import logo from '../assets/logo.png'
 import linkedin from '../assets/linkedin.png'
 import github from '../assets/github.png'
-import '../styles/header.css'
+import '../styles/header.scss'
 
 const Header = () => {
     return (
