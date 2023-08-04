@@ -4,6 +4,7 @@ import { Hero } from './components/Hero'
 import { About } from "./components/About";
 
 import './styles/app.scss'
+import { TechStack } from "./components/TechStack";
 
 const App = () => {
     return (
@@ -11,6 +12,7 @@ const App = () => {
             <Header />
             <Hero /> 
             <About />
+            <TechStack />
         </>
     )
 }

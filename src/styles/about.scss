@@ -2,18 +2,11 @@
     margin: 140px 13%;
     font-family: 'Poppins';
 }
-.about__title {
-    color: var(--solid-heading);
-    font-size: 34px;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: -1px;
-}
-.about__content, .about__education {
+.paragraph, .about__education {
     width: 70%;
     max-width: 800px;
 }
-.about__content{
+.paragraph{
     color: var(--dark-content);
     font-size: 16px;
     font-style: normal;

@@ -5,15 +5,15 @@ const About = () => {
     return (
         <div className="about" id="about">
             <div className="about__section">
-                <div className="about__title">
+                <div className="title title-centered">
                     Sobre mí
                 </div>
-                <div className="about__content">
+                <div className="paragraph">
                     Soy un ingeniero químico de profesión, apasionado por la programación; hace un poco más de dos años empecé a estudiar desarrollo web con diversos contenidos y cursos virtuales. En este portafolio encontrarás algunos proyectos que he realizado a lo largo de este tiempo, con los cuales podrás visualizar algunos de los conocimientos que he adquirido.
                 </div>
             </div>
             <div className="about__section">
-                <div className="about__title">
+                <div className="title">
                     Educación
                 </div>
                 <div className="about__education">
