@@ -1,8 +1,12 @@
 ul {
     list-style: none;
-}
-ul li {
-    cursor: pointer;
+    & li {
+        cursor: pointer;
+        & a {
+            text-decoration: none;
+            color: #666;
+        }
+    }
 }
 header, .header__links, .header__container {
     display: flex;

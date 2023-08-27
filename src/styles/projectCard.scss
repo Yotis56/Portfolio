@@ -1,0 +1,68 @@
+.projectCard {
+    width: 31%;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.20);
+    &__content {
+        height: 250px;
+        padding: 5px 18px;
+    }
+    &__image img {
+        width: 100%;
+    }
+    &__title {
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26px;
+    }
+    &__description {
+        height: 57%;
+        margin: 7px auto;
+        color: var(--dark-content);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 20px
+    }
+    &__techStack {
+        display: flex;
+        margin: 5px auto;
+        justify-content: space-between;
+        margin: 5px auto;
+        color: var(--solid-heading);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        & .bold {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+        }
+       
+    }
+    &__links{
+        display: flex;
+        justify-content: space-between;
+        & span {
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        & a {
+            color: black;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px; 
+        }
+    }
+}
+.linkIcon{
+    background: url('../assets/link-chain.svg');
+}
+.gitIconSmall{
+    background: url('../assets/github-small.svg');
+}
+

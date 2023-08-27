@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/projectCard.scss'
 
 const ProjectCard = ({project}) => {
     return (
@@ -10,17 +11,17 @@ const ProjectCard = ({project}) => {
             <div className="projectCard__title">{project.title}</div>
             <div className="projectCard__description">{project.description}</div>
             <div className="projectCard__techStack">
-                <span>Tech Stack:</span>
+                <span className="bold">Tech Stack:</span>
                 <span>{project.techStack}</span>
             </div>
             <div className="projectCard__links">
                 <div>
-                    <span className="linkIcon"></span>
-                    <a href={project.linkDemo}></a>
+                    <span className="logo linkIcon"></span>
+                    <a href={project.linkDemo}>Ir al sitio</a>
                 </div>
                 <div>
-                    <span className="gitIconSmall"></span>
-                    <a href={project.linkGithub}></a>
+                    <span className="logo gitIconSmall"></span>
+                    <a href={project.linkGithub}>Ver código</a>
                 </div>
             </div>
         </div>

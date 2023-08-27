@@ -15,10 +15,15 @@ const Projects = () => {
         linkGithub: '#' 
     })
     return (
-        <div className="projects">
+        <div className="projects" id="proyectos">
             <div className="title title-centered">Proyectos</div>
             <div className="paragraph">Estos son algunos proyectos en los que he trabajado</div>
             <div className="projects__container">
+               <ProjectCard project={project} /> 
+               <ProjectCard project={project} /> 
+               <ProjectCard project={project} /> 
+               <ProjectCard project={project} /> 
+               <ProjectCard project={project} /> 
                <ProjectCard project={project} /> 
             </div>
         </div>

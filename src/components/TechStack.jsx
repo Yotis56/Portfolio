@@ -16,7 +16,7 @@ import '../styles/techStack.scss'
 
 const TechStack = () => {
     return (
-        <div className="techStack">
+        <div className="techStack" id="tecnologias">
             <div className="title title-centered">
                 Tecnologías
             </div>
