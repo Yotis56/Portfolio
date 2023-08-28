@@ -6,6 +6,8 @@ import { TechStack } from "./components/TechStack";
 import { Projects } from "./components/Projects";
 
 import './styles/app.scss'
+import { Contact } from "./components/Contact";
+import { Footer } from "./components/Footer";
 
 const App = () => {
     return (
@@ -15,6 +17,8 @@ const App = () => {
             <About />
             <TechStack />
             <Projects />
+            <Contact />
+            <Footer />
         </>
     )
 }

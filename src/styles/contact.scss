@@ -1,0 +1,20 @@
+.contact {
+    height: 500px;
+    margin: 0px 13%;
+    &__text {
+        color: var(--solid-heading);
+        font-family: 'DM Sans';
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 70px; /* 120.69% */
+        letter-spacing: -1px;
+        text-align: center;
+        & .highlighted {
+            background: var(--gradient-heading, linear-gradient(90deg, #13B0F5 2.60%, #E70FAA 100%));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
