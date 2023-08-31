@@ -17,7 +17,7 @@ const ProjectCard = ({project}) => {
             <div className="projectCard__links">
                 <div>
                     <span className="logo linkIcon"></span>
-                    <a href={project.linkDemo}>Ir al sitio</a>
+                    <a href={project.linkDemo}>Deploy</a>
                 </div>
                 <div>
                     <span className="logo gitIconSmall"></span>

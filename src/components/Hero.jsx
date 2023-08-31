@@ -4,7 +4,7 @@ import '../styles/hero.scss'
 
 const Hero = () => {
     return (
-        <div className="hero">
+        <div className="hero" id="home">
             <div className="hero__text">
                 Hola 👋, <br/>
                 Mi nombre es<br/>

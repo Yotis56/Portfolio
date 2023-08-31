@@ -26,7 +26,7 @@ const Header = () => {
                         <li><a href="#proyectos">Proyectos</a></li>
                     </ul>
                     <ul>
-                        <li>Contacto</li>
+                        <li><a href="#contacto">Contacto</a></li>
                     </ul>
                 </div>
                 <div className="header__social">

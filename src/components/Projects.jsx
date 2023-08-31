@@ -17,7 +17,7 @@ const Projects = () => {
     return (
         <div className="projects" id="proyectos">
             <div className="title title-centered">Proyectos</div>
-            <div className="paragraph">Estos son algunos proyectos en los que he trabajado</div>
+            <div className="paragraph">Estos son algunos proyectos en los que he trabajado, te invito a que les des un vistazo</div>
             <div className="projects__container">
                <ProjectCard project={project} /> 
                <ProjectCard project={project} /> 
