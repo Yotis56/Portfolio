@@ -1,5 +1,9 @@
 import testImage from './assets/testImage.png'
 import vuelaFacilfront from './assets/vuelaFacilfront.jpg'
+import vuelaFacilback from './assets/vuelaFacilback.png'
+import platziVideo from './assets/platziVideo.png'
+import Pokedex from './assets/Pokedex.png'
+import todo from './assets/todo.png'
 
 export const projecstList = [
     {
@@ -13,7 +17,7 @@ export const projecstList = [
     },
     {
         id: 1,
-        image: '', 
+        image: vuelaFacilback, 
         title: 'Vuela Fácil - BackEnd', 
         description: 'Proyecto para el programa Misión TIC 2021. Se genera una aplicación backend con Express.js que gestiona las peticiones CRUD que hace el Frontend y conecta con una base de datos en Mongo DB', 
         techStack: 'Mongo, Express.js, Typescript', 
@@ -22,7 +26,7 @@ export const projecstList = [
     },
     {
         id: 2,
-        image: '', 
+        image: platziVideo, 
         title: 'Platzi Video', 
         description: 'Proyecto del curso de React de Platzi. Se construyó una página web con react y redux en donde se simula la llamada a una API, la renderización de información (componentes con videos) y el manejo de un estado global con Redux', 
         techStack: 'React, Redux, Sass, webpack, babel', 
@@ -31,7 +35,7 @@ export const projecstList = [
     },
     {
         id: 3,
-        image: testImage, 
+        image: Pokedex, 
         title: 'Pokedux', 
         description: 'Proyecto desarrollado en el curso de Redux de Platzi. Se hace un llamado a una api pública de pókemon, se maneja un estado global (resultados de búsqueda, favoritos e info completa) y el conjunto se renderiza con React', 
         techStack: 'React, Redux, CSS, webpack', 
@@ -40,7 +44,7 @@ export const projecstList = [
     },
     {
         id: 4,
-        image: testImage, 
+        image: todo, 
         title: 'TODO App', 
         description: 'Ejemplo clásico de una aplicación para guardar TODOs. Se le da persistencia a los datos usando el local storage, uso una navegación básica con react router', 
         techStack: 'React, Redux, Sass', 
