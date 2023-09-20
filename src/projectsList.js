@@ -4,6 +4,7 @@ import vuelaFacilback from './assets/vuelaFacilback.png'
 import platziVideo from './assets/platziVideo.png'
 import Pokedex from './assets/Pokedex.png'
 import todo from './assets/todo.png'
+import BatataBit from './assets/Batatabit.png'
 
 export const projecstList = [
     {
@@ -53,11 +54,12 @@ export const projecstList = [
     },
     {
         id: 5,
-        image: testImage, 
-        title: 'Proyecto de prueba', 
-        description: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content', 
-        techStack: 'React, Redux, Sass', 
-        linkDemo: '#', 
-        linkGithub: '#'
+        image: BatataBit, 
+        title: 'BatataBit', 
+        description: 'Proyecto de maquetación Mobile First, usando como guía un diseño encontrado en Figma con absoluta precisión', 
+        techStack: 'Figma, HTML, CSS, JS', 
+        linkDemo: 'https://yotis56.github.io/mobile-first/', 
+        linkGithub: 'https://github.com/Yotis56/mobile-first', 
+        linkFigma: 'https://www.figma.com/community/file/897624260484339106/bata-bit'
     }
 ]

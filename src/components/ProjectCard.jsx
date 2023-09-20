@@ -19,6 +19,13 @@ const ProjectCard = ({project}) => {
                     <span className="logo linkIcon"></span>
                     <a href={project.linkDemo}>Deploy</a>
                 </div>
+                {
+                    project.linkFigma && 
+                    <div>
+                        <span className="logo linkIcon"></span>
+                        <a href={project.linkFigma}>Figma</a>
+                    </div>
+                }
                 <div>
                     <span className="logo gitIconSmall"></span>
                     <a href={project.linkGithub}>Ver código</a>
