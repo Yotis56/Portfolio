@@ -10,16 +10,22 @@ ul {
 }
 header, .header__links, .header__container {
     display: flex;
-    flex-direction: row;
     align-items: center;
     color: #666;
     font-size: 15px;
     font-family: 'DM Sans';
 }
 header {
-    padding: 0 13%;
+    padding: 0 11%;
     margin-top: 40px;
     justify-content: space-between;
+}
+.header__logo img {
+    width: 175px;
+    margin-top: 7px;
+}
+.header__menu{
+    display: none;
 }
 .header__container {
     justify-content: space-around;
@@ -29,4 +35,40 @@ header {
 }
 .header__social img {
     padding: 0 10px;
+}
+@media screen and (max-width: 375px) {
+    header {
+        position: fixed;
+        width: 84%;
+        margin: 0px;
+        padding: 30px 8% 0;
+        background: white;
+        z-index: 2;
+        & .menu-visible {
+            right: 0px;
+        }
+    }
+    .header {
+        &__menu {
+            display: block;
+            cursor: pointer;
+        }
+        &__container {
+            position: absolute;
+            padding: 0 35px;
+            right: -195px;
+            top: 75px;
+            height: calc(100vh - 75px);
+            background: white;
+            flex-direction: column;
+            transition: right 0.3s ease-in;
+        }
+        &__links {
+            flex-direction: column;
+        }
+    }
+    .header__social {
+        margin-left: 20px;
+        display: flex;
+    }
 }

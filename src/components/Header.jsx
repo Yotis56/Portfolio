@@ -1,20 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 // assets
-import logo from '../assets/logo.png'
+import logo from '../assets/logo JA (1).png'
 import linkedin from '../assets/linkedin.png'
 import github from '../assets/github.png'
 import '../styles/header.scss'
 
 const Header = () => {
-    return (
+    const [menuVisibility, setMenuVisibility] = useState(false)
+
+    const handleOpenMenu = () => {
+        setMenuVisibility(!menuVisibility)
+    }
+    return (    
        <header>
             <div className="header__logo">
                 <img src={logo} alt="" />
             </div>        
-            <div className="header__container">
+            <span className={`material-symbols-outlined header__menu`} onClick={handleOpenMenu}>menu</span>
+            <div className={`header__container ${menuVisibility? 'menu-visible' : ''}`}>
                 <div className="header__links">
                     <ul>
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="#home">Inicio</a></li>
                     </ul>
                     <ul>
                         <li><a href="#about">Sobre Mí</a></li>

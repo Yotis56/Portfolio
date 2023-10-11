@@ -4,6 +4,14 @@
     --light-content: #A7A7A7;
     --colors-heading:#1E0E62;
 }
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#root {
+    overflow: hidden;
+}
 .title {
     font-family: 'Poppins';
     color: var(--solid-heading);
@@ -23,4 +31,10 @@
     font-weight: 400;
     line-height: 24px;
 }
-
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
