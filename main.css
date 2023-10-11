@@ -14,7 +14,6 @@ ul li a {
 
 header, .header__links, .header__container {
   display: flex;
-  flex-direction: row;
   align-items: center;
   color: #666;
   font-size: 15px;
@@ -22,9 +21,18 @@ header, .header__links, .header__container {
 }
 
 header {
-  padding: 0 13%;
+  padding: 0 11%;
   margin-top: 40px;
   justify-content: space-between;
+}
+
+.header__logo img {
+  width: 175px;
+  margin-top: 7px;
+}
+
+.header__menu {
+  display: none;
 }
 
 .header__container {
@@ -37,6 +45,41 @@ header {
 
 .header__social img {
   padding: 0 10px;
+}
+
+@media screen and (max-width: 375px) {
+  header {
+    position: fixed;
+    width: 84%;
+    margin: 0px;
+    padding: 30px 8% 0;
+    background: white;
+    z-index: 2;
+  }
+  header .menu-visible {
+    right: 0px;
+  }
+  .header__menu {
+    display: block;
+    cursor: pointer;
+  }
+  .header__container {
+    position: absolute;
+    padding: 0 35px;
+    right: -195px;
+    top: 75px;
+    height: calc(100vh - 75px);
+    background: white;
+    flex-direction: column;
+    transition: right 0.3s ease-in;
+  }
+  .header__links {
+    flex-direction: column;
+  }
+  .header__social {
+    margin-left: 20px;
+    display: flex;
+  }
 }
 /*!***************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/hero.scss ***!
@@ -83,8 +126,7 @@ header {
 }
 
 .paragraph, .about__education {
-  width: 85%;
-  max-width: 800px;
+  width: 100%;
 }
 
 .paragraph {
@@ -271,36 +313,6 @@ header {
 .projects .title {
   margin-bottom: 38px;
 }
-/*!**************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/app.scss ***!
-  \**************************************************************************************************************/
-:root {
-  --solid-heading: #42446E;
-  --dark-content: #666666;
-  --light-content: #A7A7A7;
-  --colors-heading:#1E0E62;
-}
-
-.title {
-  font-family: "Poppins";
-  color: var(--solid-heading);
-  font-size: 34px;
-  font-style: normal;
-  font-weight: 700;
-  letter-spacing: -1px;
-}
-.title-centered {
-  text-align: center;
-}
-
-.paragraph {
-  font-family: "Poppins";
-  color: var(--dark-content);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-}
 /*!******************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/contact.scss ***!
   \******************************************************************************************************************/
@@ -378,4 +390,48 @@ header {
   height: 20px;
   width: 20px;
   margin-left: 10px;
+}
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/app.scss ***!
+  \**************************************************************************************************************/
+:root {
+  --solid-heading: #42446E;
+  --dark-content: #666666;
+  --light-content: #A7A7A7;
+  --colors-heading:#1E0E62;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  overflow: hidden;
+}
+
+.title {
+  font-family: "Poppins";
+  color: var(--solid-heading);
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+.title-centered {
+  text-align: center;
+}
+
+.paragraph {
+  font-family: "Poppins";
+  color: var(--dark-content);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
