@@ -1,4 +1,3 @@
-import testImage from './assets/testImage.png'
 import vuelaFacilfront from './assets/vuelaFacilfront.jpg'
 import vuelaFacilback from './assets/vuelaFacilback.png'
 import platziVideo from './assets/platziVideo.png'
@@ -49,8 +48,8 @@ export const projecstList = [
         title: 'TODO App', 
         description: 'Ejemplo clásico de una aplicación para guardar TODOs. Se le da persistencia a los datos usando el local storage, uso una navegación básica con react router', 
         techStack: 'React, Redux, Sass', 
-        linkDemo: '#', 
-        linkGithub: '#'
+        linkDemo: 'https://yotis56.github.io/Todo-app/', 
+        linkGithub: 'https://github.com/Yotis56/Todo-app'
     },
     {
         id: 5,
