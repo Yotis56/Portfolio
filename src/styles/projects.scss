@@ -11,3 +11,13 @@
         margin-bottom: 38px;
     }
 }
+
+@media screen and (max-width: 426px) {
+    .projects {
+        margin: 70px 11%;
+        &__container {
+            margin-top: 30px;
+            flex-direction: column;
+        }
+    }
+}

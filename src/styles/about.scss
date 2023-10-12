@@ -63,3 +63,19 @@
 .date-logo {
     background: url('../assets/calendar-dates.svg');
 }
+
+@media screen and (max-width: 426px) {
+    .about {
+        margin: 70px 11%;
+    }
+    .about__section > div {
+        margin-bottom: 25px;
+    }
+    .education-name {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .education-location, .education-date {
+        font-size: 12px;
+    }
+}

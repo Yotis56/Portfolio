@@ -3,6 +3,10 @@
     --dark-content: #666666;
     --light-content: #A7A7A7;
     --colors-heading:#1E0E62;
+    --bp-m-sm: 375px;
+    --bp-m-lg: 425px;
+    --bp-tablet: 768px;
+    --bp-laptop: 1024px;
 }
 body{
     margin: 0;
@@ -37,4 +41,12 @@ body{
   'wght' 400,
   'GRAD' 0,
   'opsz' 48
+}
+@media screen and (max-width: 426px) {
+    .title {
+        font-size: 30px;
+    }
+    .paragraph {
+        font-size: 14px;
+    }
 }

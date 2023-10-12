@@ -13,7 +13,7 @@ const About = () => {
                 </div>
             </div>
             <div className="about__section">
-                <div className="title">
+                <div className="title title-centered">
                     Educación
                 </div>
                 <div className="about__education">

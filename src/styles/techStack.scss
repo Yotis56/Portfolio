@@ -4,6 +4,7 @@
     &__icons{
         display: grid;
         grid-template-columns: repeat(6, 1fr);
+        gap: 20px;
         justify-items: center;
         & img {
             width: 120px;
@@ -21,3 +22,41 @@
         color: var(--dark-content);
     }
 }
+@media screen and (max-width: 1023px) {
+    .techStack__icons {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .techStack {
+        &__icons {
+            grid-template-columns: repeat(4, 1fr);
+            & img {
+                width: 110px;
+                height: 110px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .techStack__icons {
+        grid-template-columns: repeat(3, 1fr);
+        & img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .techStack {
+        margin: 70px 11%;
+        &__icons {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+    }
+}
+

@@ -22,20 +22,28 @@
     -webkit-text-fill-color: transparent;
 }
 .photo {
-    width: 270px;
-    height: 270px;
+    max-width: 270px;
+    max-height: 270px;
     border-radius: 230px;
     border: 5px solid transparent;
     background: linear-gradient(white, white) padding-box, 
                 linear-gradient(0deg, rgba(207,4,150,1) 18%, rgba(143,108,207,1) 50%, rgba(42,167,207,1) 88%);
     filter: grayscale(0.35);
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 426px) {
     .hero{
-        flex-direction: column;
+        flex-direction: column-reverse;
         &__text {
             font-size: 25px;
             line-height: 40px;
         }
+        &__image {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .photo {
+        width: 230px;
+        height: 230px;
     }
 }
