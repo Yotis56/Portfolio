@@ -5,7 +5,8 @@
     align-items: center;
 }
 .hero__text {
-    width: 520px;
+    width: 100%;
+    max-width: 520px;
     color: var(--solid-heading, #42446E);
     font-family: 'Poppins';
     font-size: 43px;
@@ -28,4 +29,13 @@
     background: linear-gradient(white, white) padding-box, 
                 linear-gradient(0deg, rgba(207,4,150,1) 18%, rgba(143,108,207,1) 50%, rgba(42,167,207,1) 88%);
     filter: grayscale(0.35);
+}
+@media screen and (max-width: 375px) {
+    .hero{
+        flex-direction: column;
+        &__text {
+            font-size: 25px;
+            line-height: 40px;
+        }
+    }
 }

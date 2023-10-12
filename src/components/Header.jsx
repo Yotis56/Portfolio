@@ -20,19 +20,19 @@ const Header = () => {
             <div className={`header__container ${menuVisibility? 'menu-visible' : ''}`}>
                 <div className="header__links">
                     <ul>
-                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#home" onClick={handleOpenMenu}>Inicio</a></li>
                     </ul>
                     <ul>
-                        <li><a href="#about">Sobre Mí</a></li>
+                        <li><a href="#about" onClick={handleOpenMenu}>Sobre Mí</a></li>
                     </ul>
                     <ul>
-                        <li><a href="#tecnologias">Tecnologías</a></li>
+                        <li><a href="#tecnologias" onClick={handleOpenMenu}>Tecnologías</a></li>
                     </ul>
                     <ul>
-                        <li><a href="#proyectos">Proyectos</a></li>
+                        <li><a href="#proyectos" onClick={handleOpenMenu}>Proyectos</a></li>
                     </ul>
                     <ul>
-                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#contacto" onClick={handleOpenMenu}>Contacto</a></li>
                     </ul>
                 </div>
                 <div className="header__social">

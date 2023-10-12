@@ -56,9 +56,10 @@ header {
         &__container {
             position: absolute;
             padding: 0 35px;
-            right: -195px;
+            right: -450px;
             top: 75px;
             height: calc(100vh - 75px);
+            width: 100%;
             background: white;
             flex-direction: column;
             transition: right 0.3s ease-in;
