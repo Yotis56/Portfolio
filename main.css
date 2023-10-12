@@ -47,7 +47,7 @@ header {
   padding: 0 10px;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 426px) {
   header {
     position: fixed;
     width: 84%;
@@ -112,21 +112,29 @@ header {
 }
 
 .photo {
-  width: 270px;
-  height: 270px;
+  max-width: 270px;
+  max-height: 270px;
   border-radius: 230px;
   border: 5px solid transparent;
   background: linear-gradient(white, white) padding-box, linear-gradient(0deg, rgb(207, 4, 150) 18%, rgb(143, 108, 207) 50%, rgb(42, 167, 207) 88%);
   filter: grayscale(0.35);
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 426px) {
   .hero {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .hero__text {
     font-size: 25px;
     line-height: 40px;
+  }
+  .hero__image {
+    display: flex;
+    justify-content: center;
+  }
+  .photo {
+    width: 230px;
+    height: 230px;
   }
 }
 /*!****************************************************************************************************************!*\
@@ -207,6 +215,22 @@ header {
 .date-logo {
   background: url(c8d54d2cb6e559af1404.svg);
 }
+
+@media screen and (max-width: 426px) {
+  .about {
+    margin: 70px 11%;
+  }
+  .about__section > div {
+    margin-bottom: 25px;
+  }
+  .education-name {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .education-location, .education-date {
+    font-size: 12px;
+  }
+}
 /*!********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/techStack.scss ***!
   \********************************************************************************************************************/
@@ -217,6 +241,7 @@ header {
 .techStack__icons {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
   justify-items: center;
 }
 .techStack__icons img {
@@ -231,6 +256,39 @@ header {
   font-size: 11px;
   text-align: center;
   color: var(--dark-content);
+}
+
+@media screen and (max-width: 1023px) {
+  .techStack__icons {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media screen and (max-width: 769px) {
+  .techStack__icons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .techStack__icons img {
+    width: 110px;
+    height: 110px;
+  }
+}
+@media screen and (max-width: 610px) {
+  .techStack__icons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .techStack__icons img {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .techStack {
+    margin: 70px 11%;
+  }
+  .techStack__icons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 }
 /*!**********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/projectCard.scss ***!
@@ -309,6 +367,12 @@ header {
 .gitIconSmall {
   background: url(38b4bc57f81dec2665ff.svg);
 }
+
+@media screen and (max-width: 426px) {
+  .projectCard {
+    width: 100%;
+  }
+}
 /*!*******************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/projects.scss ***!
   \*******************************************************************************************************************/
@@ -324,6 +388,16 @@ header {
 }
 .projects .title {
   margin-bottom: 38px;
+}
+
+@media screen and (max-width: 426px) {
+  .projects {
+    margin: 70px 11%;
+  }
+  .projects__container {
+    margin-top: 30px;
+    flex-direction: column;
+  }
 }
 /*!******************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/contact.scss ***!
@@ -411,6 +485,10 @@ header {
   --dark-content: #666666;
   --light-content: #A7A7A7;
   --colors-heading:#1E0E62;
+  --bp-m-sm: 375px;
+  --bp-m-lg: 425px;
+  --bp-tablet: 768px;
+  --bp-laptop: 1024px;
 }
 
 body {
@@ -446,4 +524,13 @@ body {
 
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+@media screen and (max-width: 426px) {
+  .title {
+    font-size: 30px;
+  }
+  .paragraph {
+    font-size: 14px;
+  }
 }
