@@ -66,9 +66,10 @@ header {
   .header__container {
     position: absolute;
     padding: 0 35px;
-    right: -195px;
+    right: -450px;
     top: 75px;
     height: calc(100vh - 75px);
+    width: 100%;
     background: white;
     flex-direction: column;
     transition: right 0.3s ease-in;
@@ -92,7 +93,8 @@ header {
 }
 
 .hero__text {
-  width: 520px;
+  width: 100%;
+  max-width: 520px;
   color: var(--solid-heading, #42446E);
   font-family: "Poppins";
   font-size: 43px;
@@ -116,6 +118,16 @@ header {
   border: 5px solid transparent;
   background: linear-gradient(white, white) padding-box, linear-gradient(0deg, rgb(207, 4, 150) 18%, rgb(143, 108, 207) 50%, rgb(42, 167, 207) 88%);
   filter: grayscale(0.35);
+}
+
+@media screen and (max-width: 375px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero__text {
+    font-size: 25px;
+    line-height: 40px;
+  }
 }
 /*!****************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/about.scss ***!
