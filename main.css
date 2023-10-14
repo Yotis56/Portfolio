@@ -368,7 +368,25 @@ header {
   background: url(38b4bc57f81dec2665ff.svg);
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 812px) {
+  .projectCard {
+    width: 48%;
+  }
+  .projectCard__content {
+    height: 300px;
+  }
+  .projectCard__title {
+    font-size: 18px;
+  }
+  .projectCard__description {
+    font-size: 12px;
+    height: 52%;
+  }
+  .projectCard__techStack {
+    font-size: 11px;
+  }
+}
+@media screen and (max-width: 760px) {
   .projectCard {
     width: 100%;
   }
@@ -390,10 +408,12 @@ header {
   margin-bottom: 38px;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 746px) {
   .projects {
-    margin: 70px 11%;
+    margin: 70px 10%;
   }
+}
+@media screen and (max-width: 426px) {
   .projects__container {
     margin-top: 30px;
     flex-direction: column;
