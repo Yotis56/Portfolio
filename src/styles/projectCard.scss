@@ -1,14 +1,13 @@
 .projectCard {
-    width: 31%;
+    max-width: 360px;
     margin-bottom: 25px;
     border-radius: 20px;
     background: #FFF;
     box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.20);
     &__image {
-        height: 43%;
         & img {
-            width: 100%;
-            height: 100%;
+            width: 100%;    
+            aspect-ratio: 1.52;
             border-radius: 20px 20px 0 0;
         }
     }
@@ -73,9 +72,26 @@
     background: url('../assets/github-small.svg');
 }
 
+@media screen and (max-width: 1240px) {
+    .projectCard{
+        &__content {
+            height: 280px;
+        }
+        &__description {
+            font-size: 13px;
+        }
+        &__techStack {
+            font-size: 12px;
+            & .bold {
+                font-size: 12px;
+            }
+
+        }
+    }
+}
+
 @media screen and (max-width: 812px) {
     .projectCard{
-        width: 48%;
         &__content {
             height: 300px;
         }
@@ -91,9 +107,3 @@
         }
     }
 }
-@media screen and (max-width: 760px) {
-    .projectCard {
-        width: 100%;
-    }
-}
-// hasta unos 460 px se ve bien con una única tarjeta. a unos 714  px se ve bien con dos tarjetas. Entre medio hay que mirar qué estrategia se usa para que las tarjetas se vean bien, tal vez hacerlas anchas pero no largas, o usando flex y mandando todo al final. O una sola tarjeta con más margen. Tal vez funcione poner un ancho del 70% pero 
