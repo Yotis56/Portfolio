@@ -66,7 +66,7 @@ header {
   .header__container {
     position: absolute;
     padding: 0 35px;
-    right: -450px;
+    right: -500px;
     top: 75px;
     height: calc(100vh - 75px);
     width: 100%;
@@ -294,18 +294,15 @@ header {
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/projectCard.scss ***!
   \**********************************************************************************************************************/
 .projectCard {
-  width: 31%;
+  max-width: 360px;
   margin-bottom: 25px;
   border-radius: 20px;
   background: #FFF;
   box-shadow: 2px 2px 100px 0px rgba(0, 0, 0, 0.2);
 }
-.projectCard__image {
-  height: 43%;
-}
 .projectCard__image img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1.52;
   border-radius: 20px 20px 0 0;
 }
 .projectCard__content {
@@ -368,10 +365,21 @@ header {
   background: url(38b4bc57f81dec2665ff.svg);
 }
 
-@media screen and (max-width: 812px) {
-  .projectCard {
-    width: 48%;
+@media screen and (max-width: 1240px) {
+  .projectCard__content {
+    height: 280px;
   }
+  .projectCard__description {
+    font-size: 13px;
+  }
+  .projectCard__techStack {
+    font-size: 12px;
+  }
+  .projectCard__techStack .bold {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 812px) {
   .projectCard__content {
     height: 300px;
   }
@@ -386,37 +394,40 @@ header {
     font-size: 11px;
   }
 }
-@media screen and (max-width: 760px) {
-  .projectCard {
-    width: 100%;
-  }
-}
 /*!*******************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/projects.scss ***!
   \*******************************************************************************************************************/
 .projects {
-  margin: 140px 13%;
+  margin: 140px 10%;
   font-family: "Poppins";
 }
 .projects__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2%;
   margin-top: 50px;
 }
 .projects .title {
   margin-bottom: 38px;
 }
 
+@media screen and (max-width: 1000px) {
+  .projects__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media screen and (max-width: 746px) {
   .projects {
     margin: 70px 10%;
   }
 }
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 714px) {
   .projects__container {
-    margin-top: 30px;
+    display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 30px;
   }
 }
 /*!******************************************************************************************************************!*\
