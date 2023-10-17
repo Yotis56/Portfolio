@@ -1,5 +1,5 @@
 import React from "react"
-import Logo from '../assets/logo.png'
+import Logo from '../assets/logo JA (1).png'
 import '../styles/footer.scss'
 
 const Footer = () => {
@@ -13,20 +13,17 @@ const Footer = () => {
                     <p className="footer__tel">+57 3005285834</p>
                     <p className="footer__mail">ingyotis@gmail.com</p>
                     <div className="footer__links">
-                        <span className="icon github-icon"></span>
-                        <span className="icon linkedin-icon"></span>
+                        <a href="https://github.com/Yotis56">
+                            <span className="icon github-icon"></span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/johnatan-andres-arango-rodriguez/">
+                            <span className="icon linkedin-icon"></span>
+                        </a>
                         <span className="icon"></span>
                     </div>
                 </div>
             </div>
             <div className="footer__bottom">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">Sobre Mi</a></li>
-                    <li><a href="#tecnologias">Tecnologías</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
                 <div className="footer__text">
                     Construido por 
                     <span className="highlighted"> Johnatan Arango </span> 

@@ -2,6 +2,7 @@ ul {
     list-style: none;
     & li {
         cursor: pointer;
+        margin: 0 30px;
         & a {
             text-decoration: none;
             color: #666;
@@ -12,16 +13,16 @@ header, .header__links, .header__container {
     display: flex;
     align-items: center;
     color: #666;
-    font-size: 15px;
+    font-size: 16px;
     font-family: 'DM Sans';
 }
 header {
-    padding: 0 11%;
+    padding: 0 10%;
     margin-top: 40px;
     justify-content: space-between;
 }
 .header__logo img {
-    width: 175px;
+    width: 250px;
     margin-top: 7px;
 }
 .header__menu{
@@ -31,12 +32,41 @@ header {
     justify-content: space-around;
 }
 .header__social {
-    margin-left: 40px;
+    margin-left: 30px;
+    display: none;
 }
 .header__social img {
-    padding: 0 10px;
+    margin: 0 7px;
 }
-@media screen and (max-width: 426px) {
+
+@media screen and (max-width: 1439px) {
+    ul li {
+        margin: 0 20px;
+    }
+    .header {
+        &__logo img {
+            width: 200px;
+        }
+        &__links {
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .header {
+        &__logo img {
+            width: 150px;
+        }
+        &__links {
+            font-size: 13px;
+        }
+        &__social {
+            margin-left: 20px;
+        }
+    }
+}
+@media screen and (max-width: 714px) {
     header {
         position: fixed;
         width: 84%;
@@ -56,16 +86,19 @@ header {
         &__container {
             position: absolute;
             padding: 0 35px;
-            right: -500px;
+            right: -715px;
             top: 75px;
             height: calc(100vh - 75px);
             width: 100%;
             background: white;
             flex-direction: column;
-            transition: right 0.3s ease-in;
+            transition: right 0.5s ease-in;
         }
         &__links {
             flex-direction: column;
+            li {
+                margin: 20px 0;
+            }
         }
     }
     .header__social {

@@ -18,31 +18,20 @@ const Header = () => {
             </div>        
             <span className={`material-symbols-outlined header__menu`} onClick={handleOpenMenu}>menu</span>
             <div className={`header__container ${menuVisibility? 'menu-visible' : ''}`}>
-                <div className="header__links">
-                    <ul>
-                        <li><a href="#home" onClick={handleOpenMenu}>Inicio</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="#about" onClick={handleOpenMenu}>Sobre Mí</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="#tecnologias" onClick={handleOpenMenu}>Tecnologías</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="#proyectos" onClick={handleOpenMenu}>Proyectos</a></li>
-                    </ul>
-                    <ul>
-                        <li><a href="#contacto" onClick={handleOpenMenu}>Contacto</a></li>
-                    </ul>
-                </div>
+                <ul className="header__links">
+                    <li><a href="#home" onClick={handleOpenMenu}>Inicio</a></li>
+                    <li><a href="#about" onClick={handleOpenMenu}>Sobre Mí</a></li>
+                    <li><a href="#tecnologias" onClick={handleOpenMenu}>Tecnologías</a></li>
+                    <li><a href="#proyectos" onClick={handleOpenMenu}>Proyectos</a></li>
+                    <li><a href="#contacto" onClick={handleOpenMenu}>Contacto</a></li>
+                </ul>
                 <div className="header__social">
-                    <a href="#">
-                        <img src={linkedin} alt="" />
+                    <a href="https://www.linkedin.com/in/johnatan-andres-arango-rodriguez/">
+                        <img src={linkedin} alt="link linkedin" />
                     </a>
-                    <a href="#">
-                        <img src={github} alt="" />
+                    <a href="https://github.com/Yotis56">
+                        <img src={github} alt="link github" />
                     </a>
-                    
                 </div>
             </div>
        </header> 

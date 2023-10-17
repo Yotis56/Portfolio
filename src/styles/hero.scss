@@ -23,19 +23,44 @@
 }
 .photo {
     max-width: 270px;
-    max-height: 270px;
     border-radius: 230px;
     border: 5px solid transparent;
     background: linear-gradient(white, white) padding-box, 
                 linear-gradient(0deg, rgba(207,4,150,1) 18%, rgba(143,108,207,1) 50%, rgba(42,167,207,1) 88%);
     filter: grayscale(0.35);
 }
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 768px) {
+    .hero {
+        margin: 70px 10%;
+        &__text {
+            font-size: 35px;
+            line-height: 40px;
+        }
+    }
+    .photo {
+        width: 230px;
+    }
+}
+
+@media screen and (max-width: 714px) {
+    .hero {
+        margin: 140px 10%;
+        &__text {
+            font-size: 30px;
+            line-height: 35px;
+        }
+    }
+    .photo {
+        width: 220px;
+    }
+}
+@media screen and (max-width: 440px) {
     .hero{
         flex-direction: column-reverse;
+        margin: 100px 13%;
         &__text {
-            font-size: 25px;
-            line-height: 40px;
+            font-size: 27px;
+            line-height: 35px;
         }
         &__image {
             display: flex;
@@ -44,6 +69,5 @@
     }
     .photo {
         width: 230px;
-        height: 230px;
     }
 }

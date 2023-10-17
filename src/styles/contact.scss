@@ -18,3 +18,32 @@
         }
     }
 }
+
+@media screen and (max-width: 1025px) {
+    .contact__text {
+        font-size: 45px;
+        line-height: 65px;
+    }
+}
+@media screen and (max-width: 769px) {
+    .contact {
+        height: 300px;
+        &__text {
+            font-size: 35px;
+            line-height: 50px;
+        }
+
+    }
+}
+@media screen and (max-width: 450px) {
+    .contact__text {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .contact__text {
+        font-size: 25px;
+        line-height: 35px;
+    }
+}
