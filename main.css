@@ -6,6 +6,7 @@ ul {
 }
 ul li {
   cursor: pointer;
+  margin: 0 30px;
 }
 ul li a {
   text-decoration: none;
@@ -16,18 +17,18 @@ header, .header__links, .header__container {
   display: flex;
   align-items: center;
   color: #666;
-  font-size: 15px;
+  font-size: 16px;
   font-family: "DM Sans";
 }
 
 header {
-  padding: 0 11%;
+  padding: 0 10%;
   margin-top: 40px;
   justify-content: space-between;
 }
 
 .header__logo img {
-  width: 175px;
+  width: 250px;
   margin-top: 7px;
 }
 
@@ -40,14 +41,37 @@ header {
 }
 
 .header__social {
-  margin-left: 40px;
+  margin-left: 30px;
+  display: none;
 }
 
 .header__social img {
-  padding: 0 10px;
+  margin: 0 7px;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 1439px) {
+  ul li {
+    margin: 0 20px;
+  }
+  .header__logo img {
+    width: 200px;
+  }
+  .header__links {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .header__logo img {
+    width: 150px;
+  }
+  .header__links {
+    font-size: 13px;
+  }
+  .header__social {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 714px) {
   header {
     position: fixed;
     width: 84%;
@@ -66,16 +90,19 @@ header {
   .header__container {
     position: absolute;
     padding: 0 35px;
-    right: -500px;
+    right: -715px;
     top: 75px;
     height: calc(100vh - 75px);
     width: 100%;
     background: white;
     flex-direction: column;
-    transition: right 0.3s ease-in;
+    transition: right 0.5s ease-in;
   }
   .header__links {
     flex-direction: column;
+  }
+  .header__links li {
+    margin: 20px 0;
   }
   .header__social {
     margin-left: 20px;
@@ -113,20 +140,44 @@ header {
 
 .photo {
   max-width: 270px;
-  max-height: 270px;
   border-radius: 230px;
   border: 5px solid transparent;
   background: linear-gradient(white, white) padding-box, linear-gradient(0deg, rgb(207, 4, 150) 18%, rgb(143, 108, 207) 50%, rgb(42, 167, 207) 88%);
   filter: grayscale(0.35);
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 768px) {
   .hero {
-    flex-direction: column-reverse;
+    margin: 70px 10%;
   }
   .hero__text {
-    font-size: 25px;
+    font-size: 35px;
     line-height: 40px;
+  }
+  .photo {
+    width: 230px;
+  }
+}
+@media screen and (max-width: 714px) {
+  .hero {
+    margin: 140px 10%;
+  }
+  .hero__text {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  .photo {
+    width: 220px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .hero {
+    flex-direction: column-reverse;
+    margin: 100px 13%;
+  }
+  .hero__text {
+    font-size: 27px;
+    line-height: 35px;
   }
   .hero__image {
     display: flex;
@@ -134,7 +185,6 @@ header {
   }
   .photo {
     width: 230px;
-    height: 230px;
   }
 }
 /*!****************************************************************************************************************!*\
@@ -398,7 +448,7 @@ header {
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/projects.scss ***!
   \*******************************************************************************************************************/
 .projects {
-  margin: 140px 10%;
+  margin: 140px 10% 100px;
   font-family: "Poppins";
 }
 .projects__container {
@@ -416,7 +466,7 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media screen and (max-width: 746px) {
+@media screen and (max-width: 768px) {
   .projects {
     margin: 70px 10%;
   }
@@ -453,11 +503,39 @@ header {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@media screen and (max-width: 1025px) {
+  .contact__text {
+    font-size: 45px;
+    line-height: 65px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .contact {
+    height: 300px;
+  }
+  .contact__text {
+    font-size: 35px;
+    line-height: 50px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .contact__text {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .contact__text {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
 /*!*****************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/footer.scss ***!
   \*****************************************************************************************************************/
 .footer {
-  margin: auto 12%;
+  margin: auto 10%;
   color: var(--solid-heading);
   font-family: "Poppins", "DM Sans";
   font-size: 14px;
@@ -467,11 +545,11 @@ header {
 }
 .footer__up, .footer__info, .footer .footer__bottom, .footer .footer__bottom ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 .footer__info {
-  width: 55%;
+  gap: 15px;
 }
 .footer__bottom {
   border-top: 2px solid rgba(102, 102, 102, 0.7);
@@ -507,6 +585,22 @@ header {
   height: 20px;
   width: 20px;
   margin-left: 10px;
+}
+
+@media screen and (max-width: 1439px) {
+  .footer__logo img {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .footer__logo img {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    font-size: 12px;
+  }
 }
 /*!**************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles/app.scss ***!
