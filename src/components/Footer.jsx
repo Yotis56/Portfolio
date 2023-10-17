@@ -19,7 +19,6 @@ const Footer = () => {
                         <a href="https://www.linkedin.com/in/johnatan-andres-arango-rodriguez/">
                             <span className="icon linkedin-icon"></span>
                         </a>
-                        <span className="icon"></span>
                     </div>
                 </div>
             </div>
